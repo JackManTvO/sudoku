@@ -1,16 +1,20 @@
 #include <stdio.h>
 #include <string.h>
-#include <stdlib.h> 
+#include <stdlib.h>
 
 #define num0 ((8+8)%9+1)		//左上角第一个数
 #define side 9
 int sudoku = -1;		//数独终局数量
 
-FILE* fp, * fp0;
+FILE* fpw, * fpr;
 int seed[side] = { 0 };
 int map[side][side] = { 0 };
-int end[side][side] = { 0 };
+int ans[side][side] = { 0 };
 static int trans[side] = { 0,3,6,1,4,7,2,5,8 };
+class point {
+public:
+	int x, y;
+}zero[60];
 
 
 void swapi (int i1, int i2) {
@@ -30,11 +34,11 @@ void mod () {
 void swaprow (int row1, int row2) {
 	int temp[side];
 	for (int i = 0; i < side; i++) {
-		temp[i] = end[row1][i];
-		end[row1][i] = end[row2][i];
+		temp[i] = ans[row1][i];
+		ans[row1][i] = ans[row2][i];
 	}
 	for (int i = 0; i < side; i++)
-		end[row2][i] = temp[i];
+		ans[row2][i] = temp[i];
 }
 
 void cpy (int tar[side][side], int src[side][side]) {
@@ -45,25 +49,25 @@ void cpy (int tar[side][side], int src[side][side]) {
 	}
 }
 
-void write (int end[side][side],FILE *fp) {
+void write (int ans[side][side], FILE* fpw) {
 	for (int i = 0; i < side; i++) {
 		for (int j = 0; j < side; j++) {
-			fputc (end[i][j] + '0', fp);
+			fputc (ans[i][j] + '0', fpw);
 			if (j < 8)
-				fputc (' ', fp);
+				fputc (' ', fpw);
 		}
 		if (i < 8)
-			fputc ('\n', fp);
+			fputc ('\n', fpw);
 	}
 }
 
 void generate () {		//生成终局
-	fp = fopen (".\\sudoku.txt", "w+");
+	fopen_s (&fpw,".\\sudoku.txt", "w+");
 		/*行变换*/
 	for (int i = 0; i < 2 && sudoku>0; i++) {
 		for (int j = 0; j < 6 && sudoku>0; j++) {
 			for (int k = 0; k < 6 && sudoku>0; k++) {
-				cpy (end, map);
+				cpy (ans, map);
 				switch (i) {
 				case 0:
 					break;
@@ -113,20 +117,21 @@ void generate () {		//生成终局
 					swaprow (6, 8);
 					break;
 				}
-				write (end, fp);
+				write (ans, fpw);
 				sudoku--;
 				if (sudoku == 0) {
-					fclose (fp);
+					if (fpw != NULL)
+						fclose (fpw);
 					return;
 				}
-				fprintf (fp, "\n\n");
+				if (fpw != NULL)
+					fprintf (fpw, "\n\n");
 			}
 		}
 	}
 }
 
 void permutate (int level) {
-	int i;
 	if (level == side - 2) {
 		mod ();
 		generate ();
@@ -141,6 +146,66 @@ void permutate (int level) {
 	}
 }
 
+int dfs (int iz) {
+	class point p = zero[iz];
+	int pos[10] = { 0 };		//占有
+	/*初始化占有标识数组*/
+	for (int i = 0; i < 9; i++) {
+		if (map[p.x][i] != 0 && pos[map[p.x][i]] == 0)
+			pos[map[p.x][i]] = 1;
+		if (map[i][p.y] != 0 && pos[map[p.x][i]] == 0)
+			pos[map[i][p.y]] = 1;
+	}
+	for (int i = (p.x / 3) * 3; i < (p.x / 3) * 3 + 3; i++)
+		for (int j = (p.y / 3) * 3; j < (p.y / 3) * 3 + 3; j++)
+			if (map[i][j] != 0 && pos[map[p.x][i]] == 0)
+				pos[map[i][j]] = 1;
+
+	/*寻找可行解*/
+	int found = 0;
+	for (int i = 1; i < 10; i++) {
+		if (pos[i] == 0) {		//找到一可行解
+			found = 1;
+			map[p.x][p.y] = i;
+			pos[i] = 1;
+			if (iz == 0) {
+				write (map, fpw);
+				return 1;
+			}
+			if (dfs (iz - 1) == 1)		//找下一个空位的可行解
+				return 1;
+			pos[i] = 0;
+		}
+	}
+	return 0;
+}
+
+void solve (FILE* fpr) {
+	char buff[255];
+	while (1) {
+		memset (zero, 0, sizeof (zero));
+		int iz = 0;
+		for (int i = 0; i < 9; i++) {
+			fgets (buff, 255, fpr);
+			for (int j = 0; j < 9; j++) {
+				if (buff[2 * j] == '0') {
+					zero[iz].x = i;
+					zero[iz].y = j;
+					iz++;
+				}
+				map[i][j] = buff[2 * j] - '0';
+			}
+		}
+		if (iz == 0)
+			write (map, fpw);
+		dfs (iz - 1);
+		if (!fgets (buff, 255, fpr))
+			break;
+		fprintf (fpw, "\n\n");
+	}
+	return;
+}
+
 
 int main (int argc, char* argv[]) {
 	if (argc == 3 && strcmp (argv[1], "-c") == 0 && (sudoku = atoi (argv[2])) >= 1 && sudoku <= 1000000) {		//生成终局
@@ -153,8 +218,13 @@ int main (int argc, char* argv[]) {
 		}
 		permutate (1);
 	}
-	else if (argc == 3 && strcmp (argv[1], "-s") == 0 && (fp0 = fopen (argv[2], "r")) != NULL) {		//求解
-
+	else if (argc == 3 && strcmp (argv[1], "-s") == 0 && fopen_s (&fpr, argv[2], "r") == 0) {		//求解
+		fopen_s (&fpw, ".\\sudoku.txt", "w+");
+		solve (fpr);
+		if (fpr != NULL)
+			fclose (fpr);
+		if (fpw != NULL)
+			fclose (fpw);
 	}
 	else
 		printf ("参数错误\n");
