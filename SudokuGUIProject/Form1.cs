@@ -120,7 +120,7 @@ namespace Game
         private void button_restart_Click(object sender, EventArgs e)
         {
             StreamReader buf = new StreamReader("checkboard.txt");
-            for (int k = 0; k < 10 * (ipuzzle-1); k++)
+            for (int k = 0; k < 10 * ipuzzle; k++)
             {
                 string line0 = buf.ReadLine(); 
             }
@@ -152,6 +152,8 @@ namespace Game
         private void button_next_Click(object sender, EventArgs e)
         {
             StreamReader buf = new StreamReader("checkboard.txt");
+            Random rd = new Random();
+            ipuzzle = rd.Next(1, 100);
             for (int k = 0; k < 10 * ipuzzle; k++)
             {
                 string linemore = buf.ReadLine();
@@ -178,7 +180,6 @@ namespace Game
                     }
                 }
             }
-            ipuzzle++;
             begin = true;
         }
 

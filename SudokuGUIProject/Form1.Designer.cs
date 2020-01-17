@@ -107,6 +107,12 @@
             this.textBox97 = new System.Windows.Forms.TextBox();
             this.textBox98 = new System.Windows.Forms.TextBox();
             this.textBox99 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button_start
@@ -114,7 +120,7 @@
             this.button_start.BackColor = System.Drawing.Color.AliceBlue;
             this.button_start.Font = new System.Drawing.Font("黑体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button_start.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.button_start.Location = new System.Drawing.Point(535, 167);
+            this.button_start.Location = new System.Drawing.Point(535, 412);
             this.button_start.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_start.Name = "button_start";
             this.button_start.Size = new System.Drawing.Size(115, 45);
@@ -133,7 +139,7 @@
             this.button_next.Name = "button_next";
             this.button_next.Size = new System.Drawing.Size(115, 45);
             this.button_next.TabIndex = 82;
-            this.button_next.Text = "下一局";
+            this.button_next.Text = "新一局";
             this.button_next.UseVisualStyleBackColor = false;
             this.button_next.Click += new System.EventHandler(this.button_next_Click);
             // 
@@ -156,7 +162,7 @@
             this.button_restart.BackColor = System.Drawing.Color.AliceBlue;
             this.button_restart.Font = new System.Drawing.Font("黑体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button_restart.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.button_restart.Location = new System.Drawing.Point(535, 69);
+            this.button_restart.Location = new System.Drawing.Point(535, 314);
             this.button_restart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_restart.Name = "button_restart";
             this.button_restart.Size = new System.Drawing.Size(115, 45);
@@ -178,7 +184,6 @@
             this.textBox11.Size = new System.Drawing.Size(45, 45);
             this.textBox11.TabIndex = 1;
             this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox11.KeyPress += CheckKey;
             // 
             // textBox12
             // 
@@ -193,7 +198,6 @@
             this.textBox12.Size = new System.Drawing.Size(45, 45);
             this.textBox12.TabIndex = 2;
             this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox12.KeyPress += CheckKey;
             // 
             // textBox13
             // 
@@ -208,7 +212,6 @@
             this.textBox13.Size = new System.Drawing.Size(45, 45);
             this.textBox13.TabIndex = 3;
             this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox13.KeyPress += CheckKey;
             // 
             // textBox14
             // 
@@ -223,7 +226,6 @@
             this.textBox14.Size = new System.Drawing.Size(45, 45);
             this.textBox14.TabIndex = 4;
             this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox14.KeyPress += CheckKey;
             // 
             // textBox15
             // 
@@ -238,7 +240,6 @@
             this.textBox15.Size = new System.Drawing.Size(45, 45);
             this.textBox15.TabIndex = 5;
             this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox15.KeyPress += CheckKey;
             // 
             // textBox16
             // 
@@ -253,7 +254,6 @@
             this.textBox16.Size = new System.Drawing.Size(45, 45);
             this.textBox16.TabIndex = 6;
             this.textBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox16.KeyPress += CheckKey;
             // 
             // textBox17
             // 
@@ -268,7 +268,6 @@
             this.textBox17.Size = new System.Drawing.Size(45, 45);
             this.textBox17.TabIndex = 7;
             this.textBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox17.KeyPress += CheckKey;
             // 
             // textBox18
             // 
@@ -283,7 +282,6 @@
             this.textBox18.Size = new System.Drawing.Size(45, 45);
             this.textBox18.TabIndex = 8;
             this.textBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox18.KeyPress += CheckKey;
             // 
             // textBox19
             // 
@@ -298,7 +296,6 @@
             this.textBox19.Size = new System.Drawing.Size(45, 45);
             this.textBox19.TabIndex = 9;
             this.textBox19.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox19.KeyPress += CheckKey;
             // 
             // textBox21
             // 
@@ -313,7 +310,6 @@
             this.textBox21.Size = new System.Drawing.Size(45, 45);
             this.textBox21.TabIndex = 10;
             this.textBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox21.KeyPress += CheckKey;
             // 
             // textBox22
             // 
@@ -328,7 +324,6 @@
             this.textBox22.Size = new System.Drawing.Size(45, 45);
             this.textBox22.TabIndex = 11;
             this.textBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox22.KeyPress += CheckKey;
             // 
             // textBox23
             // 
@@ -343,7 +338,6 @@
             this.textBox23.Size = new System.Drawing.Size(45, 45);
             this.textBox23.TabIndex = 12;
             this.textBox23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox23.KeyPress += CheckKey;
             // 
             // textBox24
             // 
@@ -358,7 +352,6 @@
             this.textBox24.Size = new System.Drawing.Size(45, 45);
             this.textBox24.TabIndex = 13;
             this.textBox24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox24.KeyPress += CheckKey;
             // 
             // textBox25
             // 
@@ -373,7 +366,6 @@
             this.textBox25.Size = new System.Drawing.Size(45, 45);
             this.textBox25.TabIndex = 14;
             this.textBox25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox25.KeyPress += CheckKey;
             // 
             // textBox26
             // 
@@ -388,7 +380,6 @@
             this.textBox26.Size = new System.Drawing.Size(45, 45);
             this.textBox26.TabIndex = 15;
             this.textBox26.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox26.KeyPress += CheckKey;
             // 
             // textBox27
             // 
@@ -403,7 +394,6 @@
             this.textBox27.Size = new System.Drawing.Size(45, 45);
             this.textBox27.TabIndex = 16;
             this.textBox27.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox27.KeyPress += CheckKey;
             // 
             // textBox28
             // 
@@ -418,7 +408,6 @@
             this.textBox28.Size = new System.Drawing.Size(45, 45);
             this.textBox28.TabIndex = 17;
             this.textBox28.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox28.KeyPress += CheckKey;
             // 
             // textBox29
             // 
@@ -433,7 +422,6 @@
             this.textBox29.Size = new System.Drawing.Size(45, 45);
             this.textBox29.TabIndex = 18;
             this.textBox29.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox29.KeyPress += CheckKey;
             // 
             // textBox31
             // 
@@ -448,7 +436,6 @@
             this.textBox31.Size = new System.Drawing.Size(45, 45);
             this.textBox31.TabIndex = 19;
             this.textBox31.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox31.KeyPress += CheckKey;
             // 
             // textBox32
             // 
@@ -463,7 +450,6 @@
             this.textBox32.Size = new System.Drawing.Size(45, 45);
             this.textBox32.TabIndex = 20;
             this.textBox32.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox32.KeyPress += CheckKey;
             // 
             // textBox33
             // 
@@ -478,7 +464,6 @@
             this.textBox33.Size = new System.Drawing.Size(45, 45);
             this.textBox33.TabIndex = 21;
             this.textBox33.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox33.KeyPress += CheckKey;
             // 
             // textBox34
             // 
@@ -493,7 +478,6 @@
             this.textBox34.Size = new System.Drawing.Size(45, 45);
             this.textBox34.TabIndex = 22;
             this.textBox34.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox34.KeyPress += CheckKey;
             // 
             // textBox35
             // 
@@ -508,7 +492,6 @@
             this.textBox35.Size = new System.Drawing.Size(45, 45);
             this.textBox35.TabIndex = 23;
             this.textBox35.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox35.KeyPress += CheckKey;
             // 
             // textBox36
             // 
@@ -523,7 +506,6 @@
             this.textBox36.Size = new System.Drawing.Size(45, 45);
             this.textBox36.TabIndex = 24;
             this.textBox36.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox36.KeyPress += CheckKey;
             // 
             // textBox37
             // 
@@ -538,7 +520,6 @@
             this.textBox37.Size = new System.Drawing.Size(45, 45);
             this.textBox37.TabIndex = 25;
             this.textBox37.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox37.KeyPress += CheckKey;
             // 
             // textBox38
             // 
@@ -553,7 +534,6 @@
             this.textBox38.Size = new System.Drawing.Size(45, 45);
             this.textBox38.TabIndex = 26;
             this.textBox38.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox38.KeyPress += CheckKey;
             // 
             // textBox39
             // 
@@ -568,7 +548,6 @@
             this.textBox39.Size = new System.Drawing.Size(45, 45);
             this.textBox39.TabIndex = 27;
             this.textBox39.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox39.KeyPress += CheckKey;
             // 
             // textBox41
             // 
@@ -583,7 +562,6 @@
             this.textBox41.Size = new System.Drawing.Size(45, 45);
             this.textBox41.TabIndex = 28;
             this.textBox41.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox41.KeyPress += CheckKey;
             // 
             // textBox42
             // 
@@ -598,7 +576,6 @@
             this.textBox42.Size = new System.Drawing.Size(45, 45);
             this.textBox42.TabIndex = 29;
             this.textBox42.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox42.KeyPress += CheckKey;
             // 
             // textBox43
             // 
@@ -613,7 +590,6 @@
             this.textBox43.Size = new System.Drawing.Size(45, 45);
             this.textBox43.TabIndex = 30;
             this.textBox43.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox43.KeyPress += CheckKey;
             // 
             // textBox44
             // 
@@ -628,7 +604,6 @@
             this.textBox44.Size = new System.Drawing.Size(45, 45);
             this.textBox44.TabIndex = 31;
             this.textBox44.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox44.KeyPress += CheckKey;
             // 
             // textBox45
             // 
@@ -643,7 +618,6 @@
             this.textBox45.Size = new System.Drawing.Size(45, 45);
             this.textBox45.TabIndex = 32;
             this.textBox45.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox45.KeyPress += CheckKey;
             // 
             // textBox46
             // 
@@ -658,7 +632,6 @@
             this.textBox46.Size = new System.Drawing.Size(45, 45);
             this.textBox46.TabIndex = 33;
             this.textBox46.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox46.KeyPress += CheckKey;
             // 
             // textBox47
             // 
@@ -673,7 +646,6 @@
             this.textBox47.Size = new System.Drawing.Size(45, 45);
             this.textBox47.TabIndex = 34;
             this.textBox47.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox47.KeyPress += CheckKey;
             // 
             // textBox48
             // 
@@ -688,7 +660,6 @@
             this.textBox48.Size = new System.Drawing.Size(45, 45);
             this.textBox48.TabIndex = 35;
             this.textBox48.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox48.KeyPress += CheckKey;
             // 
             // textBox49
             // 
@@ -703,7 +674,6 @@
             this.textBox49.Size = new System.Drawing.Size(45, 45);
             this.textBox49.TabIndex = 36;
             this.textBox49.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox49.KeyPress += CheckKey;
             // 
             // textBox51
             // 
@@ -718,7 +688,6 @@
             this.textBox51.Size = new System.Drawing.Size(45, 45);
             this.textBox51.TabIndex = 37;
             this.textBox51.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox51.KeyPress += CheckKey;
             // 
             // textBox52
             // 
@@ -733,7 +702,6 @@
             this.textBox52.Size = new System.Drawing.Size(45, 45);
             this.textBox52.TabIndex = 38;
             this.textBox52.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox52.KeyPress += CheckKey;
             // 
             // textBox53
             // 
@@ -748,7 +716,6 @@
             this.textBox53.Size = new System.Drawing.Size(45, 45);
             this.textBox53.TabIndex = 39;
             this.textBox53.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox53.KeyPress += CheckKey;
             // 
             // textBox54
             // 
@@ -763,7 +730,6 @@
             this.textBox54.Size = new System.Drawing.Size(45, 45);
             this.textBox54.TabIndex = 40;
             this.textBox54.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox54.KeyPress += CheckKey;
             // 
             // textBox55
             // 
@@ -778,7 +744,6 @@
             this.textBox55.Size = new System.Drawing.Size(45, 45);
             this.textBox55.TabIndex = 41;
             this.textBox55.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox55.KeyPress += CheckKey;
             // 
             // textBox56
             // 
@@ -793,7 +758,6 @@
             this.textBox56.Size = new System.Drawing.Size(45, 45);
             this.textBox56.TabIndex = 42;
             this.textBox56.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox56.KeyPress += CheckKey;
             // 
             // textBox57
             // 
@@ -808,7 +772,6 @@
             this.textBox57.Size = new System.Drawing.Size(45, 45);
             this.textBox57.TabIndex = 43;
             this.textBox57.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox57.KeyPress += CheckKey;
             // 
             // textBox58
             // 
@@ -823,7 +786,6 @@
             this.textBox58.Size = new System.Drawing.Size(45, 45);
             this.textBox58.TabIndex = 44;
             this.textBox58.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox58.KeyPress += CheckKey;
             // 
             // textBox59
             // 
@@ -838,7 +800,6 @@
             this.textBox59.Size = new System.Drawing.Size(45, 45);
             this.textBox59.TabIndex = 45;
             this.textBox59.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox59.KeyPress += CheckKey;
             // 
             // textBox61
             // 
@@ -853,7 +814,6 @@
             this.textBox61.Size = new System.Drawing.Size(45, 45);
             this.textBox61.TabIndex = 46;
             this.textBox61.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox61.KeyPress += CheckKey;
             // 
             // textBox62
             // 
@@ -868,7 +828,6 @@
             this.textBox62.Size = new System.Drawing.Size(45, 45);
             this.textBox62.TabIndex = 47;
             this.textBox62.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox62.KeyPress += CheckKey;
             // 
             // textBox63
             // 
@@ -883,7 +842,6 @@
             this.textBox63.Size = new System.Drawing.Size(45, 45);
             this.textBox63.TabIndex = 48;
             this.textBox63.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox63.KeyPress += CheckKey;
             // 
             // textBox64
             // 
@@ -898,7 +856,6 @@
             this.textBox64.Size = new System.Drawing.Size(45, 45);
             this.textBox64.TabIndex = 49;
             this.textBox64.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox64.KeyPress += CheckKey;
             // 
             // textBox65
             // 
@@ -913,7 +870,6 @@
             this.textBox65.Size = new System.Drawing.Size(45, 45);
             this.textBox65.TabIndex = 50;
             this.textBox65.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox65.KeyPress += CheckKey;
             // 
             // textBox66
             // 
@@ -928,7 +884,6 @@
             this.textBox66.Size = new System.Drawing.Size(45, 45);
             this.textBox66.TabIndex = 51;
             this.textBox66.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox66.KeyPress += CheckKey;
             // 
             // textBox67
             // 
@@ -943,7 +898,6 @@
             this.textBox67.Size = new System.Drawing.Size(45, 45);
             this.textBox67.TabIndex = 52;
             this.textBox67.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox67.KeyPress += CheckKey;
             // 
             // textBox68
             // 
@@ -958,7 +912,6 @@
             this.textBox68.Size = new System.Drawing.Size(45, 45);
             this.textBox68.TabIndex = 53;
             this.textBox68.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox68.KeyPress += CheckKey;
             // 
             // textBox69
             // 
@@ -973,7 +926,6 @@
             this.textBox69.Size = new System.Drawing.Size(45, 45);
             this.textBox69.TabIndex = 54;
             this.textBox69.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox69.KeyPress += CheckKey;
             // 
             // textBox71
             // 
@@ -988,7 +940,6 @@
             this.textBox71.Size = new System.Drawing.Size(45, 45);
             this.textBox71.TabIndex = 55;
             this.textBox71.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox71.KeyPress += CheckKey;
             // 
             // textBox72
             // 
@@ -1003,7 +954,6 @@
             this.textBox72.Size = new System.Drawing.Size(45, 45);
             this.textBox72.TabIndex = 56;
             this.textBox72.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox72.KeyPress += CheckKey;
             // 
             // textBox73
             // 
@@ -1018,7 +968,6 @@
             this.textBox73.Size = new System.Drawing.Size(45, 45);
             this.textBox73.TabIndex = 57;
             this.textBox73.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox73.KeyPress += CheckKey;
             // 
             // textBox74
             // 
@@ -1033,7 +982,6 @@
             this.textBox74.Size = new System.Drawing.Size(45, 45);
             this.textBox74.TabIndex = 58;
             this.textBox74.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox74.KeyPress += CheckKey;
             // 
             // textBox75
             // 
@@ -1048,7 +996,6 @@
             this.textBox75.Size = new System.Drawing.Size(45, 45);
             this.textBox75.TabIndex = 59;
             this.textBox75.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox75.KeyPress += CheckKey;
             // 
             // textBox76
             // 
@@ -1063,7 +1010,6 @@
             this.textBox76.Size = new System.Drawing.Size(45, 45);
             this.textBox76.TabIndex = 60;
             this.textBox76.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox76.KeyPress += CheckKey;
             // 
             // textBox77
             // 
@@ -1078,7 +1024,6 @@
             this.textBox77.Size = new System.Drawing.Size(45, 45);
             this.textBox77.TabIndex = 61;
             this.textBox77.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox77.KeyPress += CheckKey;
             // 
             // textBox78
             // 
@@ -1093,7 +1038,6 @@
             this.textBox78.Size = new System.Drawing.Size(45, 45);
             this.textBox78.TabIndex = 62;
             this.textBox78.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox78.KeyPress += CheckKey;
             // 
             // textBox79
             // 
@@ -1108,7 +1052,6 @@
             this.textBox79.Size = new System.Drawing.Size(45, 45);
             this.textBox79.TabIndex = 63;
             this.textBox79.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox79.KeyPress += CheckKey;
             // 
             // textBox81
             // 
@@ -1123,7 +1066,6 @@
             this.textBox81.Size = new System.Drawing.Size(45, 45);
             this.textBox81.TabIndex = 64;
             this.textBox81.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox81.KeyPress += CheckKey;
             // 
             // textBox82
             // 
@@ -1138,7 +1080,6 @@
             this.textBox82.Size = new System.Drawing.Size(45, 45);
             this.textBox82.TabIndex = 65;
             this.textBox82.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox82.KeyPress += CheckKey;
             // 
             // textBox83
             // 
@@ -1153,7 +1094,6 @@
             this.textBox83.Size = new System.Drawing.Size(45, 45);
             this.textBox83.TabIndex = 66;
             this.textBox83.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox83.KeyPress += CheckKey;
             // 
             // textBox84
             // 
@@ -1168,7 +1108,6 @@
             this.textBox84.Size = new System.Drawing.Size(45, 45);
             this.textBox84.TabIndex = 67;
             this.textBox84.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox84.KeyPress += CheckKey;
             // 
             // textBox85
             // 
@@ -1183,7 +1122,6 @@
             this.textBox85.Size = new System.Drawing.Size(45, 45);
             this.textBox85.TabIndex = 68;
             this.textBox85.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox85.KeyPress += CheckKey;
             // 
             // textBox86
             // 
@@ -1198,7 +1136,6 @@
             this.textBox86.Size = new System.Drawing.Size(45, 45);
             this.textBox86.TabIndex = 69;
             this.textBox86.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox86.KeyPress += CheckKey;
             // 
             // textBox87
             // 
@@ -1213,7 +1150,6 @@
             this.textBox87.Size = new System.Drawing.Size(45, 45);
             this.textBox87.TabIndex = 70;
             this.textBox87.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox87.KeyPress += CheckKey;
             // 
             // textBox88
             // 
@@ -1228,7 +1164,6 @@
             this.textBox88.Size = new System.Drawing.Size(45, 45);
             this.textBox88.TabIndex = 71;
             this.textBox88.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox88.KeyPress += CheckKey;
             // 
             // textBox89
             // 
@@ -1243,7 +1178,6 @@
             this.textBox89.Size = new System.Drawing.Size(45, 45);
             this.textBox89.TabIndex = 72;
             this.textBox89.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox89.KeyPress += CheckKey;
             // 
             // textBox91
             // 
@@ -1258,7 +1192,6 @@
             this.textBox91.Size = new System.Drawing.Size(45, 45);
             this.textBox91.TabIndex = 73;
             this.textBox91.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox91.KeyPress += CheckKey;
             // 
             // textBox92
             // 
@@ -1273,7 +1206,6 @@
             this.textBox92.Size = new System.Drawing.Size(45, 45);
             this.textBox92.TabIndex = 74;
             this.textBox92.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox92.KeyPress += CheckKey;
             // 
             // textBox93
             // 
@@ -1288,7 +1220,6 @@
             this.textBox93.Size = new System.Drawing.Size(45, 45);
             this.textBox93.TabIndex = 75;
             this.textBox93.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox93.KeyPress += CheckKey;
             // 
             // textBox94
             // 
@@ -1303,7 +1234,6 @@
             this.textBox94.Size = new System.Drawing.Size(45, 45);
             this.textBox94.TabIndex = 76;
             this.textBox94.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox94.KeyPress += CheckKey;
             // 
             // textBox95
             // 
@@ -1318,7 +1248,6 @@
             this.textBox95.Size = new System.Drawing.Size(45, 45);
             this.textBox95.TabIndex = 77;
             this.textBox95.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox95.KeyPress += CheckKey;
             // 
             // textBox96
             // 
@@ -1333,7 +1262,6 @@
             this.textBox96.Size = new System.Drawing.Size(45, 45);
             this.textBox96.TabIndex = 78;
             this.textBox96.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox96.KeyPress += CheckKey;
             // 
             // textBox97
             // 
@@ -1348,7 +1276,6 @@
             this.textBox97.Size = new System.Drawing.Size(45, 45);
             this.textBox97.TabIndex = 79;
             this.textBox97.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox97.KeyPress += CheckKey;
             // 
             // textBox98
             // 
@@ -1363,7 +1290,6 @@
             this.textBox98.Size = new System.Drawing.Size(45, 45);
             this.textBox98.TabIndex = 80;
             this.textBox98.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox98.KeyPress += CheckKey;
             // 
             // textBox99
             // 
@@ -1378,7 +1304,66 @@
             this.textBox99.Size = new System.Drawing.Size(45, 45);
             this.textBox99.TabIndex = 81;
             this.textBox99.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox99.KeyPress += CheckKey;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("黑体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(490, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(109, 20);
+            this.label1.TabIndex = 87;
+            this.label1.Text = "数独游戏：";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("黑体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(491, 178);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(229, 19);
+            this.label2.TabIndex = 88;
+            this.label2.Text = "重新开始以撤销所有答案";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("黑体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.Location = new System.Drawing.Point(490, 159);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(189, 19);
+            this.label3.TabIndex = 89;
+            this.label3.Text = "新一局以打开新游戏";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("黑体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label4.Location = new System.Drawing.Point(491, 197);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(149, 19);
+            this.label4.TabIndex = 90;
+            this.label4.Text = "提交以检验答案";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("黑体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label5.Location = new System.Drawing.Point(490, 216);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(229, 19);
+            this.label5.TabIndex = 91;
+            this.label5.Text = "重置题库以重置题库题目";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("黑体", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label6.Location = new System.Drawing.Point(489, 47);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(231, 14);
+            this.label6.TabIndex = 92;
+            this.label6.Text = "保证每一行、每一列、每一宫不重复";
             // 
             // Form1
             // 
@@ -1386,6 +1371,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(732, 483);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox11);
             this.Controls.Add(this.textBox12);
             this.Controls.Add(this.textBox13);
@@ -1569,6 +1560,13 @@
         private System.Windows.Forms.TextBox textBox98;
         private System.Windows.Forms.TextBox textBox99;
         #endregion
+
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
 
