@@ -168,7 +168,7 @@ namespace Game
                     {
                         text_element.Text = "";
                         text_element.ReadOnly = false;
-                        text_element.ForeColor = Color.Black;
+                        text_element.ForeColor = Color.DimGray;
                         text_element.BackColor = Color.Turquoise;
                     }
                     else
